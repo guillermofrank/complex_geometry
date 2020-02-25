@@ -276,7 +276,7 @@ int compute(double *x,double *y,double *xx,double *yy,double *tx,double *ty,int 
 
   ddmin = BIG*BIG;
 
-  for(i=0;i<n-2;i++)
+  for(i=0;i<n-1;i++)
     {
       vi = (*(ti+i))-1; // invisible = 0; visible = 1;
 
