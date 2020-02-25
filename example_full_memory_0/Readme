@@ -1,0 +1,22 @@
+This is the very first working example. 
+The pedestrian remembers all the visited places
+and does nothing after exploring all.
+
+The room map is in the file geometry.dat
+
+To run this example do:
+
+1) gcc -Wall -O3 -o hope_test.e hope_test.c -lm
+   ./hope_test.e geometry.dat 1000
+   
+2)  gcc -Wall -O3 -o rule_target.e rule_target.c -lm
+   ./rule_target.e geometry_map.lammpstrj
+   
+3) gcc -Wall -O3 -o move_test.e move_test.c -lm
+   ./move_test.e geometry.dat geometry_rule.lammpstrj
+   
+4) chmod 775 run_movie
+   ./run_movie geometry
+   
+You will get the movie of a single pedestrian in geometry.mp4.
+Make sure you already installed ffmpeg and mogrify.
