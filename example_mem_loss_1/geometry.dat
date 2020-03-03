@@ -1,0 +1,27 @@
+# 
+# format: polygon xi yi xj yj normal
+# 
+# polygon = integer number labeling the object (positve integers only)
+# xi , yi = initial point of line
+# xj , yj = ending point of line
+# normal  = integer indicating outer (outside) direction (left=-1;right=1)
+#
+# please, make sure the polygon labels are in consecutive order!
+# please, write lines in counterclock-wise order!
+#
+# outer border:
+#
+1 0 0 4 0 1
+1 4 0 4 6 1
+1 4 6 2 6 1
+1 2 6 2 4 1
+1 2 4 0 4 1
+1 0 4 0 0 1
+#
+# inner obstacle:
+#
+2 1 1 2 1 -1
+2 2 1 2 2 -1
+2 2 2 1 2 -1
+2 1 2 1 1 -1 
+
