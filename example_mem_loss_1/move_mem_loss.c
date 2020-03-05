@@ -14,10 +14,10 @@
 #define B         0.08       // escala espacial de fuerza social
 #define KAPPA     25000.0    // coeficiente de friccion
 #define RADIUS    0.2        // radio de los peatones
-#define VD        1.0        // velocidad deseada (modulo)
+#define VD        2.0        // velocidad deseada (modulo)
 #define STEP      0.0001     // paso de integracion tipico 0.0001
-#define SSTEP     400        // numero de pasos totales a intervalos de SAMPLE
-#define WAIT      20         // cantidad de eventos para resetear todo
+#define SSTEP     300        // numero de pasos totales a intervalos de SAMPLE
+#define WAIT      20         // 
 
 // Cell list
 
@@ -244,7 +244,6 @@ int desire_test(int *lss,int *mem,int *ti,double *xp,double *tt,double *xb,doubl
        // For practical reasons, after the objective becomes visible, if no 
        // decision is made during WAIT time, a new re-examination is performed. 
 
-
        if ((told!=0) && (tnew>0) && (told!=tnew))
          {
            if ((*(mem+n*i+told-1))<0) 
@@ -369,8 +368,8 @@ void move2target(double *v0,double *tt,double *x,double *xb,int i,int j,int np,i
   vdx = VD*dx/r;
   vdy = VD*dy/r;
  
-  *(v0+2*i+0) = VD*vdx;
-  *(v0+2*i+1) = VD*vdy;
+  *(v0+2*i+0) = vdx;
+  *(v0+2*i+1) = vdy;
         
   return;
 }
@@ -1058,8 +1057,8 @@ void read_initial(double *x,double *v,double *f,int n)
   //*(v+0) = 0.5338;
   //*(v+1) = 0.84561;
 
-  *(x+0) = 3.5;
-  *(x+1) = 5.0;
+  *(x+0) = 0.5;
+  *(x+1) = 0.5;
   *(v+0) = -0.5338;
   *(v+1) = -0.84561;
 
