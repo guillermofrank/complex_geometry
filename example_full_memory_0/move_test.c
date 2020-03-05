@@ -313,8 +313,8 @@ void move2target(double *v0,double *tt,double *x,double *xb,int i,int j,int np,i
   vdx = VD*dx/r;
   vdy = VD*dy/r;
  
-  *(v0+2*i+0) = VD*vdx;
-  *(v0+2*i+1) = VD*vdy;
+  *(v0+2*i+0) = vdx;
+  *(v0+2*i+1) = vdy;
         
   return;
 }
