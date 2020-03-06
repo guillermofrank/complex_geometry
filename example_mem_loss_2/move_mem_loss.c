@@ -318,7 +318,7 @@ int neighbor(int *ti,double *xp,double *p1,int np)
         }
     }
 
-  if(h>0) j = *(ti+h);
+  if(h>=0) j = *(ti+h);
 
   return j;
 }
